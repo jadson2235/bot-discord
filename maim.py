@@ -399,33 +399,5 @@ async def on_member_join(member):
     except:
         pass  # Se o DM estiver fechado, ignora
 
-# ============================================
-# INICIAR O BOT
-# ============================================
-if __name__ == "__main__":
-    # COLOQUE SEU TOKEN AQUI
-    TOKEN = ""
-    
-    if TOKEN == "SEU_TOKEN_AQUI":
-        print("\n" + "="*50)
-        print("⚠️ VOCÊ PRECISA CONFIGURAR O TOKEN!")
-        print("="*50)
-        print("\n📌 PASSOS PARA CONFIGURAR:")
-        print("1. Acesse: https://discord.com/developers/applications")
-        print("2. Clique em 'New Application' e dê um nome")
-        print("3. Vá em 'Bot' no menu lateral")
-        print("4. Clique em 'Add Bot'")
-        print("5. Copie o TOKEN")
-        print("6. Cole o token no lugar de 'SEU_TOKEN_AQUI'")
-        print("\n🖼️ Para adicionar imagem vertical:")
-        print("   Mude a variável IMAGEM_VERTICAL_URL para o link da sua imagem")
-        print("   Ex: IMAGEM_VERTICAL_URL = 'https://i.imgur.com/sua-imagem.png'")
-        print("\n✅ Depois de configurar, execute o bot novamente!")
-        print("="*50)
-    else:
-        try:
-            bot.run(TOKEN)
-        except discord.LoginFailure:
-            print("\n❌ TOKEN INVÁLIDO! Verifique se o token está correto.")
-        except Exception as e:
-            print(f"\n❌ ERRO: {e}")
+import os
+TOKEN = os.getenv("TOKEN")
