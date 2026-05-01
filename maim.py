@@ -1,4 +1,4 @@
-import discord
+import discord.ui
 from discord.ext import commands
 from discord import ui, ButtonStyle
 import json
